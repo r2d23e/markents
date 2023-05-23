@@ -1,0 +1,621 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+@font-face {
+    font-family: montserrat;
+    src: url(../font/Montserrat-Regular.ttf);
+}
+
+
+@mixin for_text($ff, $fw, $fs, $lh, $lt, $ta, $cl) {
+    font-family: $ff;
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+    letter-spacing: $lt;
+    text-align: $ta;
+    color: $cl;
+}
+
+
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+
+
+.wrap {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    .hed {
+        width: 90%;
+        height: 80px;
+        margin: 10px;
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        position: fixed;
+        z-index: 5;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 20px;
+        background-color: #ffffff;
+
+        .icon_text {
+            width: 320px;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            a {
+                width: 30%;
+                height: 100%;
+
+                img {
+                    width: 100%;
+                    height: 60%;
+                }
+            }
+
+
+            .text {
+                width: 63%;
+                height: 100%;
+                border-left: 3px solid #D1292E;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                p {
+                    width: 80%;
+                    @include for_text(montserrat, 700, 10px, 12px, 1px, left, #292D32);
+                }
+            }
+        }
+
+        .ul {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+            li {
+                a {
+                    @include for_text(montserrat, 700, 14px, 17px, 1px, left, #292D32);
+                    transition: 400ms;
+                }
+
+                a:hover {
+                    color: blue;
+                    text-decoration: underline;
+                    cursor: url(../img/pointinghand_100160\ 2\ 1.svg), pointer;
+                    transition: 400ms;
+                }
+            }
+        }
+
+        .form {
+            width: 15%;
+            height: 70%;
+
+            .block {
+                width: 100%;
+                height: 100%;
+                border-radius: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                background-color: #F2F2F2;
+
+                input {
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                    background-color: #F2F2F2;
+                    border-radius: 50px;
+                    border: 1px solid black;
+                    padding: 10px;
+                    outline: 1px solid black;
+                }
+
+                input:hover {
+                    cursor: url(../img/pointinghand_100160\ 2\ 1.svg), pointer;
+                    transition: 400ms;
+                }
+
+                .img2 {
+                    position: absolute;
+                    right: 3%;
+                }
+            }
+
+
+
+        }
+    }
+
+    .sec1 {
+        width: 100%;
+        height: 718px;
+        background-image: url(../img/bg_first.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+
+
+        .mySwiper {
+            width: 100%;
+            height: 100%;
+
+            .swiper-wrapper {
+                width: 100%;
+                height: 100%;
+            }
+
+            .swiper-slide {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+
+                .textbox {
+                    width: 50%;
+                    height: 60%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+
+                    .h1 {
+                        @include for_text(montserrat, 700, 46px, 56px, 1px, left, #292D32)
+                    }
+
+                    .p1 {
+                        @include for_text(montserrat, 500, 16px, 19px, 1px, left, #292D32)
+                    }
+
+                    .but1 {
+                        width: 170px;
+                        height: 60px;
+                        background-color: #D1292E;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50px;
+                        border: none;
+                        @include for_text(montserrat, 700, 16px, 19px, 1px, left, #ffffff);
+                        cursor: url(../img/pointinghand_100160\ 2\ 1.svg), pointer;
+                        transition: 400ms;
+                    }
+
+                    .but1:hover {
+                        background-color: #ffffff;
+                        color: red;
+                        transition: 400ms;
+                        border: 1px solid red;
+                    }
+                }
+
+                img {
+                    width: 428px;
+                    height: 428px;
+                }
+            }
+
+            .swiper-pagination {
+                width: 200px;
+                height: 10px;
+                position: relative;
+                bottom: 70px;
+                left: 7%;
+                display: flex;
+                justify-content: space-between;
+
+                span {
+                    width: 35px;
+                    height: 5px;
+                    border-radius: 0;
+                    background: #292D32;
+                    cursor: url(../img/pointinghand_100160\ 2\ 1.svg), pointer;
+                    transition: 400ms;
+
+                }
+
+            }
+        }
+    }
+
+    .sec2 {
+        width: 100%;
+        height: 636px;
+        background-image: url(../img/image\ 1.png);
+
+
+        .textbox2 {
+            width: 40%;
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            position: relative;
+            left: 7%;
+            top: 5%;
+
+            .title {
+                height: 120px;
+                display: flex;
+                align-items: center;
+
+
+                background-image: url(../img/Lifotronic.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+
+                h2 {
+                    @include for_text(montserrat, 700, 40px, 48px, 1px, left, #292D32)
+                }
+
+            }
+
+            .p2 {
+                @include for_text(montserrat, 400, 16px, 19px, 1px, left, #292D32)
+            }
+        }
+    }
+
+    .sec3 {
+        width: 100%;
+        height: 720px;
+        background: linear-gradient(180deg, #F4F4F4 0%, rgba(244, 244, 244, 0) 100%);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .sweep {
+            width: 80%;
+            height: 100px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            position: relative;
+
+            .swiper-slide-thumb-active {
+                border: 1px solid black;
+            }
+
+            .swiper-slide {
+
+                height: 100%;
+                background-color: #F4F4F4;
+                border-radius: 20px;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                cursor: url(../img/pointinghand_100160\ 2\ 1.svg), pointer;
+                transition: 400ms;
+
+                img {
+                    width: 58px;
+                    height: 50px;
+                }
+
+
+                .h23 {
+                    @include for_text(montserrat, 700, 16px, 19px, 1px, center, #292D32)
+                }
+            }
+        }
+
+        .sweep2 {
+            width: 100%;
+            height: 65%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+
+            .swiper-button-next {
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                top: 76%;
+                right: 5%;
+
+                border-radius: 50px;
+
+                &::after {
+                    display: none;
+                }
+            }
+
+            .swiper-button-prev {
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                top: 76%;
+                left: 5%;
+
+                border-radius: 50px;
+
+                img {
+                    rotate: 180deg;
+                }
+
+                &::after {
+                    display: none;
+                }
+            }
+
+            .swiper-wrapper {
+                width: 100%;
+                height: 100%;
+
+
+                .swiper-slide {
+                    width: 80%;
+                    height: 90%;
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    background: linear-gradient(180deg, #F4F4F4 0%, rgba(244, 244, 244, 0) 100%);
+
+                    img {
+                        width: 420px;
+                        height: 366px;
+                    }
+
+                    .textbox3 {
+                        width: 40%;
+                        height: 90%;
+                        display: flex;
+                        justify-content: space-between;
+                        flex-direction: column;
+
+                        .but2 {
+                            width: 170px;
+                            height: 60px;
+                            background-color: #D1292E;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 50px;
+                            border: none;
+                            @include for_text(montserrat, 700, 16px, 19px, 1px, left, #ffffff);
+                            cursor: url(../img/pointinghand_100160\ 2\ 1.svg), pointer;
+                            transition: 400ms;
+                        }
+
+                        .but2:hover {
+                            background-color: #ffffff;
+                            color: red;
+                            transition: 400ms;
+                            border: 1px solid red;
+                        }
+
+                        .title {
+                            width: 100%;
+                            height: 100px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            background-repeat: no-repeat;
+
+                            .h22 {
+                                @include for_text(montserrat, 700, 40px, 49px, 1px, left, #292D32)
+                            }
+                        }
+
+                        .imgh8 {
+
+                            background-image: url(../img/H8T.svg);
+                            background-size: contain;
+
+                        }
+
+                        .imgh9 {
+                            background-image: url(../img/H9t.svg);
+                            background-size: contain;
+                        }
+
+                        .GH-900 {
+                            background-image: url(../img/GH-900+.svg);
+                            background-size: contain;
+                        }
+
+                        .ECL8000img {
+                            background-image: url(../img/ECL8000text.svg);
+                            background-size: contain;
+                        }
+
+                        .covidimg {
+                            background-image: url(../img/covid19t.svg);
+                            background-size: contain;
+                        }
+
+                        .p3 {
+                            @include for_text(montserrat, 600, 16px, 19px, 1px, left, #292D32)
+                        }
+
+                        .p4 {
+                            @include for_text(montserrat, 400, 16px, 19px, 1px, left, #292D32)
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .sec4 {
+        width: 100%;
+        height: 677px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .main {
+            width: 90%;
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+
+            .title {
+                width: 100%;
+                height: 60px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .h24 {
+                    @include for_text(montserrat, 700, 40px, 49px, 1px, left, #292D32)
+                }
+
+                .but3 {
+                    width: 170px;
+                    height: 50px;
+                    background-color: #D1292E;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50px;
+                    border: none;
+                    @include for_text(montserrat, 700, 16px, 19px, 1px, left, #ffffff);
+                    cursor: url(../img/pointinghand_100160\ 2\ 1.svg), pointer;
+                    transition: 400ms;
+                }
+
+                .but3:hover {
+                    background-color: #ffffff;
+                    color: red;
+                    transition: 400ms;
+                    border: 1px solid red;
+                }
+            }
+
+            .boxes {
+                width: 100%;
+                height: 340px;
+                display: flex;
+                justify-content: space-between;
+
+
+                .box {
+                    width: 30%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    .p5 {
+                        @include for_text(montserrat, 400, 18px, 22px, 1px, left, #898989)
+                    }
+
+                    .p6 {
+                        @include for_text(montserrat, 600, 18px, 21px, 1px, left, #292D32)
+                    }
+
+                    a {
+                        @include for_text(montserrat, 600, 18px, 21px, 1px, left, #292D32)
+                    }
+
+                    a:hover {
+                        text-decoration: underline;
+                        cursor: url(../img/pointinghand_100160\ 2\ 1.svg), pointer;
+                    }
+                }
+            }
+        }
+    }
+
+    .sec5 {
+        width: 100%;
+        height: 604px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(180deg, #F4F4F4 0%, rgba(244, 244, 244, 0) 100%);
+
+        .main {
+            width: 80%;
+            height: 70%;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+            .title {
+                width: 100%;
+                height: 60px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .h25 {
+                    @include for_text(montserrat, 700, 40px, 49px, 1px, left, #292D32)
+                }
+
+                .but4 {
+                    width: 170px;
+                    height: 50px;
+                    background-color: #D1292E;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50px;
+                    border: none;
+                    @include for_text(montserrat, 700, 16px, 19px, 1px, left, #ffffff);
+                    cursor: url(../img/pointinghand_100160\ 2\ 1.svg), pointer;
+                    transition: 400ms;
+                }
+
+                .but4:hover {
+                    background-color: #ffffff;
+                    color: red;
+                    transition: 400ms;
+                    border: 1px solid red;
+                }
+            }
+
+            .boxes {
+                width: 100%;
+                height: 250px;
+                display: flex;
+                justify-content: space-between;
+
+                .box {
+                    width: 23%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    background-color: #ffffff;
+                    border: 1px solid #E2E2E2;
+                    border-radius: 20px;
+
+                    img {
+                        width: 60px;
+                        height: 60px;
+                    }
+
+                    .p7 {
+                        width: 70%;
+                        @include for_text(montserrat, 400, 16px, 19px, 1px, center, #292D32)
+                    }
+                }
+            }
+        }
+    }
+}
